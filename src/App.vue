@@ -1,5 +1,5 @@
 <template>
-  <User :name="userInfo.name" :job="userInfo.job" :age="userInfo.age" />
+  <User v-bind="userInfo" v-on="userEventHandler" />
 </template>
 
 <script setup>
@@ -11,4 +11,13 @@ const userInfo = reactive({
   job: '前端开发',
   age: 16,
 })
+
+const userEventHandler = {
+  updateUserName(userName) {
+    alert(userName)
+  },
+  updateUserAge(userAge) {
+    alert(userAge)
+  },
+}
 </script>
