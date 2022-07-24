@@ -1,5 +1,5 @@
 <template>
-  <Image imgStyle='rounded2' />
+  <Image imgStyle="round"/>
 </template>
 
 <script setup>

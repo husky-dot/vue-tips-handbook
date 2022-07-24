@@ -12,9 +12,13 @@ import { computed } from 'vue'
 const props = defineProps({
   imgStyle: {
     type: String,
-    default: 'square'
+    default: 'square',
+    validator: (value) => {
+      return ['square', 'rounded'].includes(value)
+    }
   },
 })
+
 
 const computeImgStyle = computed(() => {
   return {
