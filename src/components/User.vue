@@ -11,5 +11,10 @@ export default {
   props: {
     userInfo: Object
   },
+  watch: {
+    'userInfo.detail.name' () {
+      console.log('name 发生变化了!')
+    }
+  }
 }
 </script>

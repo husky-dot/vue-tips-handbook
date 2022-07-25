@@ -1,6 +1,5 @@
 <template>
   <User :userInfo="userInfo" />
-
   <button @click="updateUserName">改变姓名</button>
 </template>
 
@@ -17,6 +16,6 @@ const userInfo = reactive({
 })
 
 const updateUserName = () => {
-  userInfo.detail.name = '小明'
+  userInfo.age = 22
 }
 </script>
