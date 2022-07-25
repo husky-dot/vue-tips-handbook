@@ -1,15 +1,15 @@
 <template>
   <div>
-    <p>姓名：{{ name }}</p>
-    <p>职业：{{ job }}</p>
-    <p>年龄：{{ age }}</p>
+    <p>姓名：{{ userInfo.detail.name }}</p>
+    <p>职业：{{ userInfo.job }}</p>
+    <p>年龄：{{ userInfo.age }}</p>
   </div>
 </template>
 
-<script setup>
- defineProps({
-  name: String,
-  job: String,
-  age: Number
-})
+<script>
+export default {
+  props: {
+    userInfo: Object
+  },
+}
 </script>
