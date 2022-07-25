@@ -1,7 +1,7 @@
 <template>
-  <Image imgStyle="round"/>
+  <User />
 </template>
 
 <script setup>
-import Image from './components/Image.vue'
+import User from './components/User.vue'
 </script>
