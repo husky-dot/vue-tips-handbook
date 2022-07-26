@@ -9,12 +9,12 @@
 <script>
 export default {
   props: {
-    userInfo: Object
+    userInfo: Object,
   },
   watch: {
-    'userInfo.detail.name' () {
-      console.log('name 发生变化了!')
-    }
-  }
+    'userInfo.detail.name'() {
+      console.log('userInfo 的值发生变化了')
+    },
+  },
 }
 </script>

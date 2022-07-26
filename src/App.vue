@@ -15,7 +15,8 @@ const userInfo = reactive({
   age: 16
 })
 
+
 const updateUserName = () => {
-  userInfo.age = 22
+  userInfo.detail.name = '小明'
 }
 </script>
