@@ -1,9 +1,13 @@
-<template>
-  <User v-bind="userInfo" v-on="userEventHandler" />
-</template>
+<template></template>
 
 <script setup>
-import { reactive } from 'vue'
+import { reactive, toRef } from 'vue'
 
-// https://v3.cn.vuejs.org/api/refs-api.html#toref
+const state = reactive({
+  foo: 1,
+  bar: 2,
+})
+
+const carRef = toRef(state, 'car', 10)
+console.log(carRef.value) // 10
 </script>
