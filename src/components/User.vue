@@ -1,28 +1,20 @@
 <template>
   <div>
-    <p @click="handleUserName">姓名：{{ name }}</p>
-    <p>职业：{{ job }}</p>
-    <p @click="handleUserAge">年龄：{{ age }}</p>
+    <p>私有数据:{{ privateData }}</p>
+    <p>私有数据(大写):{{ upperCasePrivateData }}</p>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 
-const props = defineProps({
-  name: String,
-  job: String,
-  age: Number,
+const privateData = ref('secrecy')
+
+const upperCasePrivateData = computed(() => {
+  return privateData.value.toUpperCase()
 })
 
-const emit = defineEmits(['updateUserName', 'updateUserAge'])
-
-const handleUserName = () => {
-  emit('updateUserName', props.name)
-}
-const handleUserAge = () => {
-  emit('updateUserAge', props.age)
-}
-
-const count = ref(0)
+defineExpose({
+  upperCasePrivateData,
+})
 </script>

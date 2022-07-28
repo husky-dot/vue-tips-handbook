@@ -1,13 +1,15 @@
-<template></template>
+<template>
+  <User ref="useRef" />
+</template>
 
 <script setup>
-import { reactive, toRef } from 'vue'
+import { ref, onMounted } from 'vue'
+import User from './components/User.vue'
 
-const state = reactive({
-  foo: 1,
-  bar: 2,
+const useRef = ref(null)
+
+onMounted(() => {
+  console.log(useRef.value.privateData)
+  console.log(useRef.value.upperCasePrivateData)
 })
-
-const carRef = toRef(state, 'car', 10)
-console.log(carRef.value) // 10
 </script>
