@@ -1,10 +1,7 @@
 <template>
-  <User>
-    <div class="userInfo">小明</div>
-  </User>
-  <div class="green">小红</div>
+  <FontSizeColor />
 </template>
 
 <script setup>
-import User from './components/User.vue'
+import FontSizeColor from './components/FontSizeColor.vue'
 </script>
