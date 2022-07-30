@@ -5,7 +5,14 @@
 </template>
 
 <style scoped>
-:global(.red) {
+:slotted(.userInfo) {
   color: red;
+}
+
+</style>
+
+<style>
+.green {
+  color: green;
 }
 </style>
