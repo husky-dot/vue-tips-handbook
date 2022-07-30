@@ -5,7 +5,7 @@
 </template>
 
 <style scoped>
-.user .userInfo{
+:global(.red) {
   color: red;
 }
 </style>
