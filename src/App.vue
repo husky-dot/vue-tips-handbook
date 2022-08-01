@@ -1,22 +1,32 @@
 <template>
-  <User :userInfo="userInfo" />
-  <button @click="updateUserName">改变姓名</button>
+  <div>
+    <ul>
+      <li v-for="(value, key, index) in {
+        name: '王大冶',
+        age: 26,
+        job: '前端开发'
+      }">
+       #{{ index + 1 }} {{ key }}: {{ value }}
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script setup>
 import { reactive } from 'vue'
-import User from './components/User.vue'
 
 const userInfo = reactive({
-  detail: {
-    name: '王大冶'
-  },
-  job: '前端开发',
-  age: 16
+  id: '001',
+  name: '王大冶',
+  age: 16,
 })
-
-
-const updateUserName = () => {
-  userInfo.detail.name = '小明'
-}
 </script>
+
+<style>
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+</style>
