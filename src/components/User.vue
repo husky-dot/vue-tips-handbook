@@ -1,20 +1,17 @@
 <template>
   <div>
-    <p>姓名：{{ userInfo.detail.name }}</p>
-    <p>职业：{{ userInfo.job }}</p>
-    <p>年龄：{{ userInfo.age }}</p>
+    <slot name="default" />
   </div>
 </template>
 
 <script>
+import { toRaw } from "@vue/reactivity";
 export default {
   props: {
     userInfo: Object,
   },
-  watch: {
-    'userInfo.detail.name'() {
-      console.log('userInfo 的值发生变化了')
-    },
+  mounted() {
+    console.log("$slots", toRaw(this.$slots));
   },
-}
+};
 </script>
