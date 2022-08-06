@@ -1,16 +1,15 @@
 <template>
   <div class="user">
-    <div v-if="$slots.header" class="user__heder">
+    <slot />
+    <div v-if="$slots.header" class="user__header">
       <slot name="header"></slot>
     </div>
-    <slot />
   </div>
 </template>
-
 <script>
 export default {
   mounted() {
-    console.log("$slots", this.$slots);
+    console.log('$slots', this.$slots)
   },
-};
+}
 </script>
