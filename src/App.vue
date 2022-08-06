@@ -1,16 +1,7 @@
 <template>
-  <div>
-    <VFor :list="list">
-      <template v-slot="{ item }">
-        <strong>{{ item }}</strong>
-      </template>
-    </VFor>
-  </div>
+  <Button> 点击我 <strong>领取</strong> 前端资源 </Button>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import VFor from './components/VFor.vue'
-
-const list = ref([1, 2, 3])
+import Button from './components/Button.vue'
 </script>
