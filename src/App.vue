@@ -1,9 +1,9 @@
 <template>
-  <Button>
-    点击我<strong>领取</strong> <img />
-  </Button>
+  <div>
+    <GlobalProperty />
+  </div>
 </template>
 
 <script setup>
-import Button from './components/Button.vue'
+import GlobalProperty from './components/GlobalProperty.vue'
 </script>
