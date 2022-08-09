@@ -1,9 +1,9 @@
 <template>
   <div>
-    <GlobalProperty />
+    <LazyImage />
   </div>
 </template>
 
 <script setup>
-import GlobalProperty from './components/GlobalProperty.vue'
+import LazyImage from "./components/LazyImage.vue";
 </script>
