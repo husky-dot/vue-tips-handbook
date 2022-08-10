@@ -1,9 +1,9 @@
 <template>
   <div>
-    <LazyImage />
+    <DynamicClass />
   </div>
 </template>
 
 <script setup>
-import LazyImage from "./components/LazyImage.vue";
+import DynamicClass from "./components/DynamicClass.vue";
 </script>
