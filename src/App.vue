@@ -1,9 +1,18 @@
 <template>
   <div>
-    <DynamicClass />
+    <Child ref="child" />
   </div>
 </template>
 
-<script setup>
-import DynamicClass from "./components/DynamicClass.vue";
+<script>
+import Child from './components/Child.vue'
+
+export default {
+  components: {
+    Child
+  },
+  mounted () {
+    this.$refs.child.childMethod()
+  }
+}
 </script>
