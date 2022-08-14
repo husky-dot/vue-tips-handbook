@@ -1,18 +1,9 @@
 <template>
   <div>
-    <Child ref="child" />
+    <User />
   </div>
 </template>
 
-<script>
-import Child from './components/Child.vue'
-
-export default {
-  components: {
-    Child
-  },
-  mounted () {
-    this.$refs.child.childMethod()
-  }
-}
+<script setup>
+import User from './components/Second.vue'
 </script>
