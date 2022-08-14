@@ -1,9 +1,12 @@
 <template>
-  <div>
-    <User />
-  </div>
+  <Toggle title="Toggled 内容" :hidden="hidden" @click="hidden = !hidden">
+    通过点击来切换显隐藏内容
+  </Toggle>
 </template>
 
 <script setup>
-import User from './components/Second.vue'
+import { ref } from 'vue'
+import Toggle from './components/Toggle.vue'
+
+const hidden = ref(false)
 </script>
