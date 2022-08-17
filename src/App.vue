@@ -1,9 +1,7 @@
 <template>
-  <Widget title="Toggled 内容" :hidden="hidden" @click="hidden = !hidden">
-    通过点击来切换显隐藏内容
-  </Widget>
+  <External />
 </template>
 
 <script setup>
-import Widget from './components/Widget.vue'
+import External from './components/External.vue'
 </script>
