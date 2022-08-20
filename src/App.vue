@@ -1,7 +1,7 @@
 <template>
-  <External />
+  <UseIcon iconType="primary" iconSize="large" />
 </template>
 
 <script setup>
-import External from './components/External.vue'
+import UseIcon from './components/UseIcon.vue'
 </script>
