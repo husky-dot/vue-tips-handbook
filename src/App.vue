@@ -1,7 +1,7 @@
 <template>
-  <UseIcon iconType="primary" iconSize="large" />
+  <VPre />
 </template>
 
 <script setup>
-import UseIcon from './components/UseIcon.vue'
+import VPre from './components/VPre.vue'
 </script>
