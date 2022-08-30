@@ -1,17 +1,41 @@
 <template>
-  <button @click="triggerError = !triggerError">触发 Error</button>
-  <span v-if="triggerError">
-    <!-- 这里将会引发一个错误，因为试图执行一个不存在的方法 -->
-    {{ hello.oops() }}
-  </span>
-  <span v-else>
-    <!-- 这里会产生一个警告，因为`hello`不存在。 -->
-    {{ hello }}
-  </span>
+  <div></div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-const triggerError = ref(false)
-</script>
+const productList = [
+  {
+    id: '001',
+    name: '商品1',
+    desc: '这是一个商品',
+  },
+  {
+    id: '002',
+    name: '商品2',
+    desc: '这是一个商品',
+  },
+  {
+    id: '003',
+    name: '商品3',
+    desc: '这是一个商品',
+  },
+  {
+    id: '004',
+    name: '商品4',
+    desc: '这是一个商品',
+  },
+  {
+    id: '005',
+    name: '商品5',
+    desc: '这是一个商品',
+  },
+]
 
+const obj = productList.reduce((prev, next) => {
+  const { id } = next
+  prev[id] = next
+  return prev
+}, {})
+
+console.log(JSON.stringify(obj))
+</script>
