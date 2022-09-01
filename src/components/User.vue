@@ -1,31 +1,14 @@
 <template>
-  <div class="user">
-    <div class="list">
-      <SmallComponent label="姓名：" content="大冶" />
-      <SmallComponent label="年龄：" content="40" />
-    </div>
-  </div>
+  <input ref="myInput" />
 </template>
-
-<script>
-const SmallComponent = {
-  props: ['label', 'content'],
-  template: `
-      <div class="list__item">
-        <div class="list__left">
-          <div class="list__label">{{label}}：</div>
-          <div class="list__content">{{ content }}</div>
-        </div>
-        <div class="list__right">
-          <i class="list__icon">添加</i>
-        </div>
-      </div>
-  `,
-}
-
-export default {
-  components: {
-    SmallComponent,
-  },
-}
+<script setup>
+import { ref, watchEffect } from 'vue'
+const myInput = ref(null)
+watchEffect(() => {
+  if (myInput.value) {
+    myInput.value.focus()
+  } else {
+    // 尚未挂载，或者该元素已被卸载（例如，通过v-if）。
+  }
+})
 </script>
