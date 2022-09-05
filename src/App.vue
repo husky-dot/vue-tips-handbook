@@ -1,7 +1,7 @@
 <template>
-  <User></User>
+  <MyButton class="red"></MyButton>
 </template>
 
 <script setup>
-import User from './components/User.vue'
+import MyButton from './components/MyButton.vue'
 </script>
