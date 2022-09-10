@@ -1,27 +1,19 @@
 <template>
-  <footer v-if="showFooter">
-    <h3>来自底层的仰望</h3>
-    <slot name="footer" />
-  </footer>
+  <BaseButton>
+    <BaseIcon name="search" />
+  </BaseButton>
+  <BaseInput v-model="searchText" />
 </template>
 
 <script>
+import BaseButton from './BaseButton.vue'
+import BaseIcon from './BaseIcon.vue'
+import BaseInput from './BaseInput.vue'
 export default {
-  data() {
-    return {
-      showFooter: false,
-    }
-  },
-  created() {
-    this.setShowSlots()
-  },
-  beforeUpdate() {
-    this.setShowSlots()
-  },
-  methods: {
-    setShowSlots() {
-      this.showFooter = this.$slots.footer?.[0]
-    },
+  components: {
+    BaseButton,
+    BaseIcon,
+    BaseInput,
   },
 }
 </script>
