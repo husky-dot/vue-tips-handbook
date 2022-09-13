@@ -1,7 +1,6 @@
 <template>
-  <div>
-    <p>当前输入的值： {{ text }}</p>
-    <CustomCom v-model.no-underscore="text"></CustomCom>
+  <div v-memo="[points > 1000]">
+    <CustomCom :points="points"></CustomCom>
   </div>
 </template>
 
@@ -9,5 +8,9 @@
 import { ref } from 'vue'
 import CustomCom from './components/CustomCom.vue'
 
-const text = ref('')
+const points = ref(120)
+
+setTimeout(() => {
+  points.value = 4000
+}, 2000)
 </script>

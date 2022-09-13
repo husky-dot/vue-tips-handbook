@@ -1,19 +1,19 @@
 <template>
-  <input type="text" :value="modelValue" @input="emitValue" />
+  <div>
+    <div v-if="points <= 1000">层级1</div>
+    <div v-if="points > 1000">层级2</div>
+  </div>
 </template>
 
-<script setup>
-const props = defineProps({
-  modelValue: String,
-  modelModifiers: { default: () => ({}) },
-})
-console.log('props.modelModifiers', props.modelModifiers)
-const emit = defineEmits(['update:modelValue'])
-function emitValue(e) {
-  let value = e.target.value
-  if (props.modelModifiers['no-underscore']) {
-    value = value.replace('_', '')
-  }
-  emit('update:modelValue', value)
+<script>
+export default {
+  props: {
+    points: Number,
+  },
+  watch: {
+    points() {
+      console.log('watch 执行了')
+    },
+  },
 }
 </script>
