@@ -1,16 +1,16 @@
 <template>
-  <div v-memo="[points > 1000]">
-    <CustomCom :points="points"></CustomCom>
-  </div>
+  <my-button
+    data-cy="button"
+    class="dark-button"
+    id="the-button"
+    @click="doSomething()"
+    aria-label="A nice button"
+    disabled="true"
+    undefinedProperty="ops"
+  />
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import CustomCom from './components/CustomCom.vue'
+import MyButton from './components/Button.vue'
 
-const points = ref(120)
-
-setTimeout(() => {
-  points.value = 4000
-}, 2000)
 </script>
