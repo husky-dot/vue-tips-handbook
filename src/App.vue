@@ -1,15 +1,12 @@
 <template>
-  <DetectOutsideClick @detect="onOutsideClick">
-    <div class="popup">
-      <div>点我呀</div>
-    </div>
+  
+  <DetectOutsideClick v-model="input">
+    <template #prepend>Http://</template>
   </DetectOutsideClick>
 </template>
 
 <script setup>
-import DetectOutsideClick from './components/DetectOutsideClick.vue'
-
-const onOutsideClick = () => {
-  alert('点击了')
-}
+import DetectOutsideClick from './components/WrapperInput.vue'
+import { ref } from 'vue'
+const input = ref('')
 </script>

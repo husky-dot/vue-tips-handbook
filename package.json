@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "element-plus": "^2.2.19",
+    "element-ui": "^2.15.10",
     "v-lazy-image": "^2.1.1",
     "vue": "^3.2.37"
   },
