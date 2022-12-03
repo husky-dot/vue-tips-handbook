@@ -1,28 +1,27 @@
-
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zh">
   <head>
+    <title>Home</title>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="module">
+      const { createApp } = Vue
+      const app = createApp({
+        data() {
+          return {
+            message: 'vue技巧合集',
+          }
+        },
+      })
+      // 看这里
+      app.config.compilerOptions.delimiters = ['${', '}']
+      app.mount('#app')
+    </script>
   </head>
   <body>
-    <style>
-      .layout {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        background: red;
-        min-height: 100vh; /* fall-back */
-        min-height: -moz-available;
-        min-height: -webkit-fill-available;
-        min-height: fill-available;
-      }
-    </style>
-
-    <div class="layout">
-      <p>Lorem ipsum dolor sit amet...</p>
-      <button>Sign Up</button>
-    </div>
+    <main>
+      <div id="app">${ message }</div>
+    </main>
   </body>
 </html>
