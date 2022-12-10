@@ -4,7 +4,7 @@ import 'element-plus/dist/index.css'
 import App from './App.vue'
 
 const app = createApp(App)
-// app.use(ElementPlus)
+app.use(ElementPlus)
 
 app.config.compilerOptions.delimiters = ['${', '}']
 app.mount('#app')
